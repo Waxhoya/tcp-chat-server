@@ -3,9 +3,6 @@ module.exports = class ChatRoom {
         this.clientsInChat = 1;
         this.clients = [];
     }
-    // funk(){
-    //     console.log("maybe its here")
-    // }
 
     add(client){
         client.name = 'User ' + (this.clientsInChat++);
