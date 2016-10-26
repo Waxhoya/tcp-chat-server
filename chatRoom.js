@@ -1,11 +1,14 @@
-module.exports = class chatRoom {
-    constructor(){
+module.exports = class ChatRoom {
+    constructor() {
         this.clientsInChat = 1;
         this.clients = [];
     }
+    // funk(){
+    //     console.log("maybe its here")
+    // }
 
     add(client){
-        client.name = 'User' + (this.clientsInChat++);
+        client.name = 'User ' + (this.clientsInChat++);
         this.clients.push(client);
         this.clients.forEach(user => {
             user.write(client.name + " entered the room\n");
@@ -27,5 +30,5 @@ module.exports = class chatRoom {
             cli.write('User: '+client.name+' has left the room');
         });
     }
-    
+
 };
