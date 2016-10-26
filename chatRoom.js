@@ -1,4 +1,4 @@
-moduule.exports = class chatRoom {
+module.exports = class chatRoom {
     constructor(){
         this.clientsInChat = 1;
         this.clients = [];
