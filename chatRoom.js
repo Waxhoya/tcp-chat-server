@@ -18,13 +18,14 @@ module.exports = class chatRoom {
             cli.write(client.name + ': '+ message);
         });
     }
+
     leaveChatRoom(client){
         const index = this.client.indexOf(client);
         if (index !== -1) this.clients.splice(index, 1);
         this.clients.forEach(cli => {
             if (cli == client) return;
             cli.write('User: '+client.name+' has left the room');
-        })
-        
+        });
     }
+    
 };
