@@ -9,6 +9,7 @@ class Tester {
 };
 
 const testUser1 = new Tester;
+const testUser2 = new Tester;
 
 describe ('Chat function check', () => {
     it('Chat client connects to server', () => {
@@ -20,5 +21,4 @@ describe ('Chat function check', () => {
         });
         assert.sameMembers(['Client 1','Client 2'], clientNames, 'Confirmed array match');
     });
-
-    
+});
