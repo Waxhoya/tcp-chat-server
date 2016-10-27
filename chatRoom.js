@@ -20,7 +20,9 @@ module.exports = class ChatRoom {
     }
 
     leaveChatRoom(client){
-        const index = this.client.indexOf(client);
+        // console.log("For Each bugtrace", client)
+        // console.log("TWO", this.client.indexOf(client));
+        const index = this.clients.indexOf(client);
         if (index !== -1) this.clients.splice(index, 1);
         this.clients.forEach(cli => {
             if (cli == client) return;

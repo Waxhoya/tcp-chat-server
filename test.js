@@ -26,11 +26,18 @@ describe ('Chat function check', () => {
     it('Checks that messages are sent', () => {
 
         chatRoom.chat(testUser1, 'Im a test!');
-        console.log(testUser2.recieved);
-        console.log("user one: ", testUser1.recieved)
         assert.equal(testUser2.recieved, 'User 1: Im a test!');
         assert.equal(testUser1.recieved, 'User 2: entered the room');   
     });
 
+    it('Users can exit the chatRoom', () => {
+        console.log('mocha tries: ', testUser2);
+        console.log(chatRoom.clients);
+        chatRoom.leaveChatRoom(testUser2);
+        assert.fail(chatRoom.chat(testUser2, 'Now Im a test!'));
+    });
 
+    it('Can Pass the Bechdel test', => {
+
+    });
 });
