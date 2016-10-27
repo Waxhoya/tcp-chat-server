@@ -8,7 +8,7 @@ module.exports = class ChatRoom {
         client.name = 'User ' + (this.clientsInChat++);
         this.clients.push(client);
         this.clients.forEach(user => {
-            user.write(client.name + " entered the room\n");
+            user.write(client.name + ": entered the room");
         });
     }
 
